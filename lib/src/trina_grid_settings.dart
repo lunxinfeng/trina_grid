@@ -28,7 +28,7 @@ abstract class TrinaGridSettings {
       (gridPadding * 2) + (gridBorderWidth * 2);
 
   /// Row - Default row height
-  static const double rowHeight = 45.0;
+  static const double rowHeight = 24.0;
 
   /// Cell vertical border width (between rows)
   static const double cellVerticalBorderWidth = 1.0;

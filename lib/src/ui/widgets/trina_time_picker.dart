@@ -391,7 +391,7 @@ class _TimeDigitInputState extends State<_TimeDigitInput> {
                   maxLines: 1,
                   autofocus: widget.autoFocus,
                   canRequestFocus: true,
-                  errorBuilder: (context, errorText) => const SizedBox.shrink(),
+                  // errorBuilder: (context, errorText) => const SizedBox.shrink(),
                   buildCounter: (
                     context, {
                     required currentLength,
