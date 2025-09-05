@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:trina_grid/src/manager/event/trina_grid_copy_event.dart';
 import 'package:trina_grid/trina_grid.dart';
 
 /// Define the action by implementing the [execute] method
@@ -660,7 +661,9 @@ class TrinaGridActionCopyValues extends TrinaGridShortcutAction {
       return;
     }
 
-    Clipboard.setData(ClipboardData(text: stateManager.currentSelectingText));
+    final text = stateManager.currentSelectingText;
+    Clipboard.setData(ClipboardData(text: text));
+    stateManager.eventManager?.addEvent(TrinaGridCopyEvent(text: text));
   }
 }
 
